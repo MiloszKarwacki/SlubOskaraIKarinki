@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useSwipeable } from "react-swipeable";
 
 const photos = [
-  "/slodko.jpg",
   "/galeria/galeria1.jpg",
   "/galeria/galeria2.jpg",
   "/galeria/galeria3.jpg",
@@ -19,7 +18,8 @@ const photos = [
   "/galeria/galeria12.jpg",
   "/galeria/galeria13.jpg",
   "/galeria/galeria14.jpg",
-  "/galeria/galeria15.jpg"
+  "/galeria/galeria15.jpg",
+  "/galeria/galeria16.jpg"
 ];
 
 const Zdjecia = () => {
@@ -93,13 +93,15 @@ const Zdjecia = () => {
 
   return (
     <div className="grid grid-cols-1 gap-6 my-12">
-      <div className="w-full mx-auto">
+      <div className="w-full flex justify-center">
         <Image
           src={photos[0]}
-          alt="Główne zdjęcie"
-          width={600}
-          height={400}
-          className="w-full h-auto object-cover"
+          alt="Obrazek 1"
+          layout="responsive"
+          width={1200}
+          height={800}
+          className="object-cover w-full h-auto"
+          onClick={() => openModal(photos[0])}
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -118,7 +120,7 @@ const Zdjecia = () => {
                 width={isPortrait ? 300 : 400}
                 height={isPortrait ? 400 : 300}
                 className={`object-cover ${isPortrait ? "h-auto" : "h-96"}`}
-                onClick={() => openModal(photo)} // Open modal
+                onClick={() => openModal(photo)}
               />
             </div>
           );

@@ -65,7 +65,7 @@ const Navigation = () => {
               href={item.href}
               key={item.name}
               onClick={handleLinkClick}
-              className="text-2xl sm:text-4xl font-bold hover:underline"
+              className="text-2xl sm:text-4xl font-bold rounded-2xl bg-gray-500 px-4 bg-opacity-70 hover:bg-opacity-100 transition-all duration-300 transform hover:scale-105"
             >
               {item.name}
             </Link>
@@ -73,7 +73,7 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Menu na większych ekranach */}
+      {/* Menu on larger screens */}
       <div className="hidden sm:flex justify-center items-center gap-8 mt-8">
         {NavItems.map(item =>
           <Link
