@@ -39,7 +39,7 @@ export default function Home() {
         </span>
         <br />
         <div className="flex justify-center items-center mt-4">
-          <span>16:00</span>
+          <span>15:00</span>
         </div>
       </div>
     </div>

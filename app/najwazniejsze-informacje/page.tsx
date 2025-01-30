@@ -11,7 +11,7 @@ const NajważniejszeInfo = () => {
       {/* Wedding Ceremony */}
       <div className="text-2xl">
         <h2 className="text-4xl font-bold mb-4">Ślub</h2>
-        <p>Data: 31 lipca 2025, godzina: 16:00</p>
+        <p>Data: 31 lipca 2025, godzina: 15:00</p>
         <p>Brzezna 146, 33-386 Chochorowice</p>
       </div>
 

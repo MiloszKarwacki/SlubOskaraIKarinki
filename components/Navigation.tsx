@@ -44,11 +44,11 @@ const Navigation = () => {
       <div className="absolute top-4 right-4 sm:hidden z-20">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className={`text-3xl font-bold focus:outline-none transition-colors duration-300 ${isMenuOpen
+          className={`text-3xl font-semibold focus:outline-none transition-colors duration-300 ${isMenuOpen
             ? "text-white"
             : "text-black"}`}
         >
-          {isMenuOpen ? "✖" : "☰"}
+          {isMenuOpen ? "x" : "☰"}
         </button>
       </div>
 
@@ -65,7 +65,7 @@ const Navigation = () => {
               href={item.href}
               key={item.name}
               onClick={handleLinkClick}
-              className="text-2xl sm:text-4xl font-bold rounded-2xl bg-gray-500 px-4 bg-opacity-70 hover:bg-opacity-100 transition-all duration-300 transform hover:scale-105"
+              className="text-2xl sm:text-4xl font-bold rounded-2xl bg-gray-500 px-4 py-2 bg-opacity-70 hover:bg-opacity-100 transition-all duration-300 transform hover:scale-105 w-full text-center"
             >
               {item.name}
             </Link>
